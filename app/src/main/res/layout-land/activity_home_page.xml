@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/okp"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer=""
+    tools:context="com.example.authentication.HomePage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/design_default_color_primary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <!--        <FrameLayout-->
+        <!--            android:id="@+id/fragment_container"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent">-->
+
+
+        <!--            <Button-->
+        <!--                android:id="@+id/button3"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Button" />-->
+
+        <!--            <Button-->
+        <!--                android:id="@+id/button4"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Button" />-->
+        <!--        </FrameLayout>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="317dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="188dp"
+
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="139dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/po" />
+
+
+        <Button
+            android:id="@+id/mapp"
+            android:layout_width="139dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-100dp"
+            android:background="@drawable/shapebutton"
+            android:backgroundTint="#112FDA"
+            android:rotationX="4"
+            android:text="TRACKING" />
+
+        <Button
+            android:id="@+id/book"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="410dp"
+            android:layout_marginTop="-100dp"
+            android:background="@drawable/shapebutton"
+            android:backgroundTint="#112FDA"
+            android:text="BOOKING" />
+
+        <Button
+            android:id="@+id/help"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shapebutton"
+            android:backgroundTint="#112FDA"
+            android:baselineAligned="false"
+            android:text="HELP" />
+
+    </LinearLayout>
+
+<com.google.android.material.navigation.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:id="@+id/nav_view"
+    app:headerLayout="@layout/nav_header"
+    app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
